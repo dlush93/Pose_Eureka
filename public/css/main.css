@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+html {
+    margin: 1rem;
+}
+
+* {
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    * {
+        font-size: 8px;
+    }
+}
+
+/* main.html */
+
+body {
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+body::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url('../images/background.png');
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+header .controller, header .cam {
+    margin: 0 2rem;
+    width: 3rem;
+    height: 2.5rem;
+}
+
+header span {
+    font-family: 'Teko', sans-serif;
+    vertical-align: middle;
+    font-size: 3.75rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.room-list {
+    margin: 0.5rem;
+    padding: 2rem;
+    width: 50vw;
+    height: 74vh;
+    border: black solid 2px;
+    background-color: white;
+}
+
+.title {
+    font-family: 'jua', sans-serif;
+    font-size: 2.5rem;
+}
+
+.rooms {
+    height: 70%;
+    border-bottom: black solid 1px;
+}
+
+.room-list h1 {
+    padding: 1rem;
+    border-bottom: solid rgb(134, 134, 134) 2px;
+}
+
+.room-list ul {
+    padding: 1rem;
+}
+
+.room-list ul li {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border: rgb(114, 102, 102) solid 2px;
+    border-radius: 1rem;
+}
+
+.room-list ul li a {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.room-list ul li a span {
+     font-size: 1.5rem;
+}
+
+.room-list ul li:hover {
+    background-color: rgb(114, 102, 102);
+    transition: ease-in-out 0.2s;
+}
+
+.room-list ul li a:hover {
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+.chat {
+    margin: 0.5rem;
+    padding: 2rem;
+    width: 30vw;
+    height: 74vh;
+    border: black solid 2px;
+    background-color: white;
+}
+
+.chat-room {
+    margin-bottom: 1rem;
+    border-bottom: black solid 1.5px;
+}
+
+.app__wrap {
+    margin: 0 auto;
+    padding: 3rem 0 0;
+    position: relative;
+    width: 100%;
+    max-width: 19vw;
+    min-width: 12vw;
+    font-size: 1rem;
+    border-top: 1.25rem solid #567ea1;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+.app__info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    color: #fff;
+    background: #86add2;
+}
+
+.app__window {
+    overflow-y: auto;
+    padding: 1.25rem 1.5rem;
+    height: 45vh;
+    background: #e1e2e1;
+    text-align: center;
+}
+
+.output__user {
+    text-align: left;
+    margin: 0 0 1.25rem 0;
+}
+
+.output__user__name {
+    margin-right: 1.25rem;
+    font-weight: 700;
+}
+
+.app__input__wrap {
+    padding: 1.25rem;
+    background: #f5f5f6;
+}
+
+.app__input__wrap:after {
+    content:'';
+    display:block;
+    clear:both;
+}
+
+.app__input {
+    float: left;
+    display: block;
+    width: 80%;
+    height: 2rem;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.app__button {
+    float: left;
+    display: block;
+    width: 20%;
+    height: 2rem;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+footer {
+    margin: auto;
+    width: 25vw;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1.25rem;
+    margin: auto;
+}
+
+footer img {
+    width: 5vw;
+    margin-right: 0.75rem;
+}
+
+/* stream.html */
+
+.game-box {
+    display: flex;
+}
+
+.game-display {
+    width: 55vw;
+    height: 95vh;
+    border: black dashed 1px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45vw;
+    height: 95vh;
+}
+
+.input_video {
+    position: absolute;
+    left: 57.1vw;
+    width: 15vw;
+}
+
+.output_canvas {
+    width: 40vw;
+    margin-bottom: 1.5rem;
+}
+
+.start-button {
+    cursor: pointer;
+}
+
+.start-button a {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Motion Fighters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/game.png" class="controller">
+        <span>Motion Fighters</span>
+        <img src="images/cam.png" class="cam">
+    </header>
+    <div class="main">
+        <div class="room-list">
+            <h1 class="title">방 리스트</h1>
+            <div class="rooms">
+                <ul>
+                    <li>
+                        <a href="/room_1">
+                            <span class="room-title">1:1 초보방</span>
+                            <span class="room-state">1/2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/room_1">
+                            <span class="room-title">고수만 와라</span>
+                            <span class="room-state">2/2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/room_1">
+                            <span class="room-title">10년째 초보</span>
+                            <span class="room-state">1/2</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <footer>
+                <img src="images/logo.png" alt="">
+                <div>
+                    <p>신하섬 강병국 이정무 천영성</p>
+                    <p>
+                        <i class="fab fa-twitter mx-1"></i>
+                        <i class="fab fa-instagram mx-1"></i>
+                        <i class="fab fa-facebook-square mx-1"></i>
+                        <i class="fab fa-youtube mx-1"></i>
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <div class="chat">
+            <div class="chat-room">
+                <h3 class="title">채팅방</h3>
+            </div>
+            <div class="app__wrap">
+                <div id="info" class="app__info"></div>
+                <div id="chatWindow" class="app__window"></div>
+                <div class="app__input__wrap">
+                    <input id="chatInput" type="text" class="app__input" autofocus placeholder="대화를 입력해주세요 💬">
+                    <button id="chatMessageSendBtn" class="app__button">입력</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
